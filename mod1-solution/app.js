@@ -21,14 +21,20 @@ function LunchCheckController($scope) {
     if(count <= 3 && count !=0)
     {
       $scope.message = "Enjoy!";
+      $scope.fontCss = "font-green";
+      $scope.borderCss = "border-green";
     }
     else if (count >= 4 )
     {
       $scope.message = "Too much!";
+      $scope.fontCss = "font-green";
+      $scope.borderCss = "border-green";
     }
     else
      {
        $scope.message = "Please enter data first";
+       $scope.fontCss = "font-red";
+       $scope.borderCss = "border-red";
     }
   };
 }
