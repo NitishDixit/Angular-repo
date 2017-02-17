@@ -38,8 +38,6 @@ function NarrowItDownController(MenuSearchService)
     promise.then(function (response) {
         narrowCtrl.found = response;
         narrowCtrl.emptyList = MenuSearchService.checkIfAnyItem();
-        console.log(narrowCtrl.found);
-        console.log(narrowCtrl.emptyList);
     })
   }
   narrowCtrl.removeItem = function(itemIndex) {

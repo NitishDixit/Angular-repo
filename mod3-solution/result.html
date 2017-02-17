@@ -2,7 +2,7 @@
 <br><br><br>
 <ul>
   <li ng-repeat="item in narrowCtrl.found">
-    {{item.name}}, {{item.short_name}}, {{item.description}}
+    {{item.name}},&nbsp;&nbsp;{{item.short_name}},&nbsp;&nbsp;{{item.description}}
     <button ng-click = "narrowCtrl.onRemove({index: $index})">Don't want this one!</button>
   </li>
 </ul>
