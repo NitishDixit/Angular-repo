@@ -1,0 +1,8 @@
+<h2 ng-if="narrowCtrl.emptyList" class="error">Nothing Found!</h2>
+<br><br><br>
+<ul>
+  <li ng-repeat="item in narrowCtrl.found">
+    {{item.name}}, {{item.short_name}}, {{item.description}}
+    <button ng-click = "narrowCtrl.onRemove({index: $index})">Don't want this one!</button>
+  </li>
+</ul>
