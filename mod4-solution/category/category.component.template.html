@@ -1,6 +1,11 @@
+<div style="float:left">
+<a ui-sref="home">Home</a>  >
+Category
+</div>
+
 <h2>categories List</h2>
-<ul>
-  <li ng-repeat = "item in $ctrl.categories">
-    <a ui-sref="items({shortName: '{{item.short_name}}'})"> {{item.name}}</a>
-  </li>
-</ul>
+<table>
+  <tr ng-repeat = "item in $ctrl.categories">
+    <td><a ui-sref="items({shortName: '{{item.short_name}}'})"> {{item.name}}</a></td>
+  </tr>
+</table>

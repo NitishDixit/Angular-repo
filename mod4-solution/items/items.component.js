@@ -3,7 +3,7 @@
   .component('items',{
     templateUrl:'items/items.component.template.html',
     bindings: {
-      categories: '<'
+      items: '<'
     }
   })
 })();

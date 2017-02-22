@@ -10,7 +10,7 @@
     var itemsCtrl = this;
     itemsCtrl.items = [];
     itemsCtrl.items = itemsData.data;
-    console.log(itemsCtrl.items);
+    //console.log(itemsCtrl.items);
   }
 
 })();
