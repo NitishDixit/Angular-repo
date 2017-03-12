@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="" ng-if="myInfoController.notSigned">
+        <div>
+          You haven't signed up yet. Please <a ui-sref="public.sign-up">Sign Up Now</a>
+        </div>
+    </div>
+    <div ng-if="!myInfoController.notSigned">
+      <div class="row">
+        <div class="col-md-12">
+            First Name: {{myInfoController.info.firstName}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            Last Name: {{myInfoController.info.lastName}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            E-Mail: {{myInfoController.info.email}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            Phone Number: {{myInfoController.info.phone}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          Favorite Dish:
+          <img class="img-responsive" ng-src="{{myInfoController.basePath}}/images/{{myInfoController.info.favoriteDish}}.jpg">
+        </div>
+      </div>
+
+    </div>
+</div>

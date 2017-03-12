@@ -1,0 +1,103 @@
+<div class="container">
+  <h2>Sign Up Registration</h2>
+  <form name="regForm" novalidate>
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">First Name:</label>
+      </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="firstName" placeholder="First Name"
+          ng-model="reg.user.firstName" required minlength="3" maxlength="20">
+          <span ng-if="(regForm.firstName.$error.minlength || regForm.firstName.$error.required) && regForm.firstName.$touched">
+            First Name needs to be atleast 3 characters long
+          </span>
+          <span ng-if="regForm.firstName.$error.maxlength && regForm.firstName.$touched">
+            First Name too long. Cannot be longer than 20 characters
+          </span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">Last Name:</label>
+      </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="lastName" placeholder="Last Name"
+          ng-model="reg.user.lastName" required minlength="3" maxlength="20">
+          <span ng-if="(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched">
+            Last Name needs to be atleast 3 characters long
+          </span>
+          <span ng-if="regForm.lastName.$error.maxlength && regForm.lastName.$touched">
+            Last Name too long. Cannot be longer than 20 characters
+          </span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">Email:</label>
+      </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" name="email" placeholder="Email"
+          ng-model="reg.user.email" required>
+          <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+        </div>
+    </div>
+
+<br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">Phone number:</label>
+      </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="phone" placeholder="Phone Number"
+          ng-model="reg.user.phone"
+           pattern="(\d{3})-(\d{3})-(\d{4})">
+           <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+               Phone must be in the format ###-###-####.
+           </span>
+        </div>
+    </div>
+<br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="control-label">Favorite Dish's Menu #:</label>
+      </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="favoriteDish" placeholder="Enter your favorite dish's number"
+          ng-model="reg.user.favoriteDish"
+           required>
+           <span ng-if="regForm.favoriteDish.$invalid && regForm.favoriteDish.$touched">
+               Please enter your favorite dish
+           </span>
+        </div>
+    </div>
+<br>
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <button class="btn" style="background:rgba(0, 174, 240, 1); color:white;" ng-disabled="regForm.$invalid" ng-click="signUpController.submit()">Submit</button>  
+      </div>
+    </div>
+
+
+    <div ng-if="signUpController.valid">
+      Your information has been saved. Thank You! You'll very soon be receiving the newsletters
+    </div>
+    <br>
+
+    <div class="control-label" ng-if="signUpController.wrongDish">
+      Sorry! No such item found.
+    </div>
+
+  </form>
+
+</div>
